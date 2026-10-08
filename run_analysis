@@ -1,0 +1,14 @@
+# Load the analysis functions.
+source("GSEA_batch_pipeline.R")
+
+# Choose one input file and run GSEA.
+analysis <- run_gsea_choose()
+
+# Keep the results available in R for further plotting.
+gsea_res <- analysis$gsea_result
+ranked_table <- analysis$ranked_table
+
+message(
+  "Finished! The results table and PDF were saved ",
+  "in the same folder as your input file."
+)
